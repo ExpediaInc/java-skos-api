@@ -42,5 +42,69 @@
         <module>distribution</module>
     </modules>
 
+    <organization>
+        <name>Content Systems</name>
+        <url>https://confluence/display/CS/Content+Systems</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Copyright Expedia Inc.</name>
+        </license>
+    </licenses>
+    <ciManagement>
+        <system>jenkins</system>
+        <url>http://jenkins.karmalab.net/jenkins/</url>
+    </ciManagement>
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://jira/jira/browse/CSPB</url>
+    </issueManagement>
+    <distributionManagement>
+        <repository>
+            <id>contentsystems-maven-release-local</id>
+            <name>${project.organization.name} Releases Repository</name>
+            <url>https://artylab.expedia.biz/contentsystems-maven-release-local/</url>
+        </repository>
+        <snapshotRepository>
+            <id>contentsystems-maven-snapshot-local</id>
+            <name>${project.organization.name} Snapshots Repository</name>
+            <url>https://artylab.expedia.biz/contentsystems-maven-snapshot-local/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>contentsystems-maven-release-local</id>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <url>https://artylab.expedia.biz/contentsystems-maven-release-local/</url>
+        </repository>
+        <repository>
+            <id>contentsystems-maven-snapshot-local</id>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <url>https://artylab.expedia.biz/contentsystems-maven-snapshot-local/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>cs-plugins-releases</id>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <url>https://artylab.expedia.biz/central-maven-remote-cache/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 
 </project>
